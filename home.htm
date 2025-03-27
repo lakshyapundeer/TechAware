@@ -1,0 +1,571 @@
+<html>
+<head>
+	<title>HOME-TECH AWARE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "icon" type = "image/png" href = "logo2.jpg">
+<style>
+
+	span{
+		font-size: 25px;
+		font-family: cursive;
+		color: white;
+		animation: blink 1s linear infinite;
+	}
+@keyframes blink{
+0%{opacity: .2;}
+2%{opacity: .5;}
+50%{opacity: .8;}
+75%{opacity: 1.5;}
+100%{opacity: 2;}
+}
+	:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+ 
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+html{
+  height: 100%;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 16px;
+}
+ 
+body{
+  height: 100%;
+  background-color: black;
+}
+ 
+.hero-section{
+  align-items: flex-start;
+  background-color: black;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+ 
+.cgrid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+ 
+@media(min-width: 540px){
+  .cgrid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+ 
+@media(min-width: 960px){
+  .cgrid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+ 
+.card{
+  list-style: none;
+  position: relative;
+  margin-top: -295px;
+    height: 200;
+
+}
+ 
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+.g{
+      width:0px;
+      height: 0px;
+      line-height: 0px;
+      bottom: -235px;
+      background: none;
+      color: white;
+      font-size: 0px;
+      width:0;
+    }
+ 
+.cardbg{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+ 
+.card:hover .cardbg{
+  transform: scale(1.10) translateZ(0);
+}
+ 
+.ccontent{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+ 
+ 
+.textcard{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top:55px;
+  height:20%;  
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+    margin-top:55px;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: #f2f2f2;
+  color:#DAA520
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content  {
+  display: block;
+}
+
+
+body{
+  margin:0;
+  overflow: hidden;
+  font-size:0;
+  font-family: Arial, Helvetica, sans-serif;
+		}
+canvas{
+  background: black;
+  width: 100vw;
+  height: 80vh;
+  margin-top: -30px;
+		}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 0px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 15px;
+  width: 55px;
+  height: 50px;}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  border-radius: 10px;
+
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+    border-radius: 5px;
+
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+  border-radius: 5px;
+  font-family: century gothic;
+
+}
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+  border-radius: 5px;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+  border-radius: 5px;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    margin-top: 55px;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-top: 55px;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+</style>
+</head>
+<body>
+  <div class="navbar">
+
+  <form class="example"  style="float:right;max-width:200px;"   method="get" action="http://www.google.com/search" style="float:right;padding:14px;">
+
+<input type="text" name="q" size="25"  maxlength="255" value="Type to Search..." onfocus="if(this.value==this.defaultValue)this.value=&#39;&#39;; this.style.color=&#39;black&#39;;" onblur="if(this.value==&#39;&#39;)this.value=this.defaultValue; ">
+  
+  
+  <button type="submit">Go  </button>
+  <input type="hidden" name="" value="">
+</form>
+<a href="contact.htm">Contact Us</a>
+  <a href="services.htm">Services</a>
+  <a href="media.htm">Our Highlights</a>
+  <div class="dropdown">
+  <button class="dropbtn show" onclick="myFunction()">Products
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content " >
+    
+    <a href="smart living.htm" style="margin-top:0px;">Smart Automation</a>
+    <a href="digital transformation.htm" style="margin-top:0px;">Digital Trends</a>
+    <a href="Immersive Technologies.htm" style="margin-top:0px;">Immersive Technologies</a>
+      <a href="testimonials.htm" style="margin-top:0px;">Testimonials</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">About
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="about.htm" style="margin-top:0px;">About</a>
+    <a href="clients.html" style="margin-top:0px;">Our Clients</a>
+  </div>
+</div>
+  <a href="home.htm">Home</a>
+  <IMG SRC="LOGO2.jpg" height="150" width="170">
+</div>
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<div class="blink"><span>
+<button class="open-button" onclick="openForm()"><p><img src="download1.png" alt="Click to Chat" height="45" width="50"></p></button></span></div>
+
+
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn" onclick="myFunction1()">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+function myFunction1() {
+  alert("We will reply you soon");
+}
+</script>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<canvas id="scene"></canvas>
+	<div class="g"><input id="copy" type="text" value="TECH AWARE" ></div>
+<section class="hero-section">
+  <div class="cgrid">
+    
+    <a class="card" href="smart living.htm">
+      <div class="cardbg" style="background-image: url(smart.jpg)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">Smart Automation</h3>
+      </div>
+    </a>
+    <a class="card" href="digital transformation.htm">
+      <div class="cardbg" style="background-image: url(digital.jpg)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">Digital Trends</h3>
+      </div>
+    </li>
+    <a class="card" href="Immersive Technologies.htm">
+      <div class="cardbg" style="background-image: url(manage.jpg)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">Immersive Technologies</h3>
+      </div>
+    </a>
+    <a class="card" href="testimonials.htm">
+      <div class="cardbg" style="background-image: url(testimonials.png)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">Testimonials</h3>
+      </div>
+    </a>
+  <div>
+</section>
+<br><br><br><br>
+<script>
+
+	var canvas = document.querySelector("#scene"),
+		ctx = canvas.getContext("2d"),
+		particles = [],
+		amount = 0,
+		mouse = {x:0,y:0},
+		radius = 2;
+
+	var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
+
+	var copy = document.querySelector("#copy");
+
+	var ww = canvas.width = window.innerWidth;
+	var wh = canvas.height = window.innerHeight;
+
+	function Particle(x,y){
+		this.x =  Math.random()*ww;
+		this.y =  Math.random()*wh;
+		this.dest = {
+			x : x,
+			y: y
+		};
+		this.r =  Math.random()*5 + 2;
+		this.vx = (Math.random()-0.5)*20;
+		this.vy = (Math.random()-0.5)*20;
+		this.accX = 0;
+		this.accY = 0;
+		this.friction = Math.random()*0.01 + 0.94;
+
+		this.color = colors[Math.floor(Math.random()*4)];
+	}
+
+	Particle.prototype.render = function() {
+
+
+		this.accX = (this.dest.x - this.x)/1000;
+		this.accY = (this.dest.y - this.y)/1000;
+		this.vx += this.accX;
+		this.vy += this.accY;
+		this.vx *= this.friction;
+		this.vy *= this.friction;
+
+		this.x += this.vx;
+		this.y +=  this.vy;
+
+		ctx.fillStyle = this.color;
+		ctx.beginPath();
+		ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+		ctx.fill();
+
+		var a = this.x - mouse.x;
+		var b = this.y - mouse.y;
+
+		var distance = Math.sqrt( a*a + b*b );
+		if(distance<(radius*70)){
+			this.accX = (this.x - mouse.x)/100;
+			this.accY = (this.y - mouse.y)/100;
+			this.vx += this.accX;
+			this.vy += this.accY;
+		}
+
+	}
+
+	function onMouseMove(e){
+		mouse.x = e.clientX;
+		mouse.y = e.clientY;
+	}
+
+	function onTouchMove(e){
+    if(e.touches.length > 0 ){
+      mouse.x = e.touches[0].clientX;
+      mouse.y = e.touches[0].clientY;
+    }
+	}
+
+function onTouchEnd(e){
+  mouse.x = -9999;
+  mouse.y = -9999;
+}
+
+	function initScene(){
+		ww = canvas.width = window.innerWidth;
+		wh = canvas.height = window.innerHeight;
+
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+		ctx.font = "bold "+(ww/10)+"px sans-serif";
+		ctx.textAlign = "center";
+		ctx.fillText(copy.value, ww/2, wh/2);
+
+		var data  = ctx.getImageData(0, 0, ww, wh).data;
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.globalCompositeOperation = "screen";
+
+		particles = [];
+		for(var i=0;i<ww;i+=Math.round(ww/150)){
+			for(var j=0;j<wh;j+=Math.round(ww/150)){
+				if(data[ ((i + j*ww)*4) + 3] > 150){
+					particles.push(new Particle(i,j));
+				}
+			}
+		}
+		amount = particles.length;
+
+	}
+
+	function onMouseClick(){
+		radius++;
+		if(radius ===5){
+			radius = 0;
+		}
+	}
+
+	function render(a) {
+		requestAnimationFrame(render);
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		for (var i = 0; i < amount; i++) {
+			particles[i].render();
+		}
+	};
+
+	copy.addEventListener("keyup", initScene);
+	window.addEventListener("resize", initScene);
+	window.addEventListener("mousemove", onMouseMove);
+	window.addEventListener("touchmove", onTouchMove);
+	window.addEventListener("click", onMouseClick);
+	window.addEventListener("touchend", onTouchEnd);
+	initScene();
+	requestAnimationFrame(render);
+
+</script>
+</body>
+</html>
